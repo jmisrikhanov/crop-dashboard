@@ -40,7 +40,7 @@ A modern, production-ready web application for managing and visualizing 1,000,00
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/jmisrikhanov/crop-dashboard.git
    cd crop-dashboard
    ```
 

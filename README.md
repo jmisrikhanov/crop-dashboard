@@ -2,6 +2,10 @@
 
 A modern, production-ready web application for managing and visualizing 1,000,000+ crop science research records with advanced filtering, sorting, and pagination capabilities.
 
+## 🌐 Live Demo
+
+**[View Live Application →](https://cropdashboard.netlify.app/)**
+
 ## 🚀 Features
 
 ### Core Functionality

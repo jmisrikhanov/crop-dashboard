@@ -10,6 +10,7 @@ import { ComplexForm } from "./components/ComplexForm";
 
 import { useAuth } from "./hooks/useAuth";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import { NotFound } from "./components/NotFound";
 
 const ProtectedRoute = ({ children }: { children: React.JSX.Element }) => {
   const { isAuthenticated, isLoading } = useAuth();
@@ -38,7 +39,7 @@ const AppContent = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route
-            path="/dashboard"
+            path="/"
             element={
               <ProtectedRoute>
                 <MainLayout>
@@ -57,7 +58,7 @@ const AppContent = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AntdApp>
     </ConfigProvider>

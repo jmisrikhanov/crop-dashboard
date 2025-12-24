@@ -41,7 +41,7 @@ export const ComplexForm: React.FC = () => {
       await formService.submit(values);
       message.success("Form submitted successfully!");
       form.resetFields();
-      setTimeout(() => navigate("/dashboard"), 1000);
+      setTimeout(() => navigate("/"), 1000);
     } catch (error: any) {
       if (error.response && error.response.status === 400) {
         const rawData = error.response.data;
@@ -113,7 +113,11 @@ export const ComplexForm: React.FC = () => {
               { type: "email", message: "Please enter a valid email" },
             ]}
           >
-            <Input prefix={<MailOutlined />} placeholder="john@example.com" type="email" />
+            <Input
+              prefix={<MailOutlined />}
+              placeholder="john@example.com"
+              type="email"
+            />
           </Form.Item>
 
           <Form.Item
@@ -191,7 +195,12 @@ export const ComplexForm: React.FC = () => {
               label={<span className="dark:text-gray-300">Age</span>}
               name="age"
               rules={[
-                { type: "number", min: 1, max: 150, message: "Valid age required" },
+                {
+                  type: "number",
+                  min: 1,
+                  max: 150,
+                  message: "Valid age required",
+                },
               ]}
             >
               <InputNumber
